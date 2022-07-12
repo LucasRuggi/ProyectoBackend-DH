@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <title>Paciente</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../../style/style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+    <script defer type="text/javascript" src="js/getPaciente.js"></script>
+    <script defer type="text/javascript" src="js/put_paciente.js"></script>
+    <script defer type="text/javascript" src="js/deletePaciente.js"></script>
+</head>
+<body>
+<div class="container">
+    <ul class="nav nav-pills">
+        <li class="nav-item">
+            <a class="nav-link button" href="paciente.html">Menu</a>
+        </li>
+    </ul>
+
+    <div>
+        <h1 class="titulo">Pacientes</h1>
+        <div class="row col-md-12">
+            <table id="pacienteTable" class="table table-striped">
+                <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Nombre</th>
+                    <th>Apellido</th>
+                    <th>Domicilio</th>
+                    <th>DNI</th>
+                    <th>Fecha de alta</th>
+                    <th>Editar/Eliminar</th>
+                </tr>
+                </thead>
+                <tbody>
+                <th></th>
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <div class="row formularioContent">
+        <div class="col-sm-6 formularioPut" id="divFormUpdate">
+            <form id="formularioUpdate">
+                <div class="form-group">
+                    <label>ID:</label>
+                    <input type="text" class="form-control" id="pacienteId" readonly>
+                </div>
+                <div class="form-group">
+                    <label>Nombre:</label>
+                    <input type="text" class="form-control" placeholder="Nombre" id="nombre" required>
+                </div>
+                <div class="form-group">
+                    <label>Apellido:</label>
+                    <input type="text" class="form-control" placeholder="Apellido" id="apellido" required>
+                </div>
+                <div class="form-group">
+                    <label>Domicilio:</label>
+                    <input type="text" class="form-control" placeholder="Domicilio" id="domicilio" required>
+                </div>
+                <div class="form-group">
+                    <label>DNI:</label>
+                    <input type="text" class="form-control" placeholder="DNI" id="dni" required>
+                </div>
+                <div class="form-group">
+                    <label>Fecha de alta:</label>
+                    <input type="text" class="form-control" id="fechaDeAlta" readonly>
+                </div>
+                <button type="submit" class="btn btn-success">Modificar</button>
+            </form>
+            <div id="response" style="display:none; margin:10px">
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>
